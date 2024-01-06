@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nintendo Switch Games</title>
+</head>
+<body>
+    <h1>Nintendo Switch Games</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>In Stock</th>
+            <th>Release Date</th>
+            <th>Rating</th>
+        </tr>
+        <tr th:each="game : ${games}">
+            <td th:text="${game.title}">Title</td>
+            <td th:text="${game.description}">Description</td>
+            <td th:text="${game.price}">Price</td>
+            <td th:text="${game.genre}">Genre</td>
+            <td th:text="${game.inStock}">In Stock</td>
+            <td th:text="${game.releaseDate}">Release Date</td>
+            <td th:text="${game.rating}">Rating</td>
+        </tr>
+    </table>
+</body>
+</html>
