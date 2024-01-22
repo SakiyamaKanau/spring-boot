@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ページのタイトル</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+      /* 修正前と修正後の列を離すためのスタイル */
+      .offset-col {
+            margin-left: 10px; /* 適切な間隔に調整してください */
+        }
+
+       .border-bottom-top-0 {
+         border-top: none;
+         border-bottom: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">修正後</th>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">修正前</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">製品コード</th>
+                    <td scope="row" class="border border-bottom-0">
+                        <div class="row">
+                            <div class="col-6">
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="col-6">
+                                ラジオ
+                            </div>
+                        </div>
+                    </td>
+                    <td scope="row" >
+                        <p>&nbsp;</p>
+                    </td>
+                    <td scope="row" class="border border-bottom-0">
+                        <p>製品名</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">製品名</th>
+                    <td scope="row" class="border-right border-left">
+                        <div class="row">
+                            <div class="col-2">
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                    </td>
+                    <td scope="row" >
+                        <p>&nbsp;</p>
+                    </td>
+                    <td scope="row" class="border-right border-left">
+                        <p>製品名</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">帳票ID製品コード</th>
+                    <td scope="row" class="border-right border-left">
+                        <div class="row">
+                            <div class="col-2">
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                    </td>
+                    <td scope="row" >
+                        <p>&nbsp;</p>
+                    </td>
+                    <td scope="row" class="border-right border-left">
+                        <p>製品名</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">削除予定日</th>
+                    <td scope="row" class="border border-top-0">
+                        <div class="row" >
+                            <div class="col-2">
+                                <input class="form-control" type="date">
+                            </div>
+                        </div>
+                    </td>
+                    <td scope="row" >
+                        <p>&nbsp;</p>
+                    </td>
+                    <td scope="row"  class="border border-top-0">
+                        <p>製品名</p>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

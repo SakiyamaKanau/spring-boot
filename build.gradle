@@ -27,26 +27,31 @@ ext {
 }
 
 dependencies {
+    // Spring Bootのスターター依存関係
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
-    productionRuntimeClasspath "org.glassfish.jaxb:jaxb-runtime:2.3.9"
-    runtimeClasspath "org.glassfish.jaxb:jaxb-runtime:4.0.4"
-    testCompileClasspath "org.glassfish.jaxb:jaxb-runtime:2.3.9"
+    
+    // JAXB関連の依存関係
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.9" // 本番用として
+    testImplementation "org.glassfish.jaxb:jaxb-runtime:2.3.9" // テスト用として
+
+    // JAX-WSとJUnitの依存関係
     testImplementation "com.sun.xml.ws:jaxws-rt:4.0.2"
     testImplementation "org.junit.jupiter:junit-jupiter:5.10.1"
+
+    // Lombokの依存関係
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    compileClasspath "org.glassfish.jaxb:jaxb-runtime:2.3.9"
-    compileOnly "com.sun.xml.ws:jaxws-rt:4.0.2"
+
+    // Spring Bootのテスト関連の依存関係
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
-    testRuntimeClasspath "org.glassfish.jaxb:jaxb-runtime:2.3.9"
 
     // MyBatisとPostgreSQLの依存関係
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
     implementation 'org.postgresql:postgresql'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 

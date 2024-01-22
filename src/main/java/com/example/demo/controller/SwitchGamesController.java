@@ -18,6 +18,6 @@ public class SwitchGamesController {
     public String showGames(Model model) {
         List<SwitchGame> games = switchGamesMapper.findAll();
         model.addAttribute("games", games);
-        return "games";
+        return "test";
     }
 }
